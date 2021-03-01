@@ -3,7 +3,7 @@
 - [离散的动作空间](#离散的动作空间)
   - [DQN](#DQN)
   - [DDQN](#DDQN)
-  - [Dueling DQN](#Dueling DQN)
+  - [Dueling-DQN](#Dueling-DQN)
 
 - [连续的动作空间](#连续的动作空间)
 
@@ -17,7 +17,7 @@
 ### DDQN
 (Double DQN)更加稳定，因为最优化操作会传播高估误差，所以她同时训练两个Q network并选择较小的Q值用于计算TD-error，降低高估误差。
 
-### Dueling DQN
+### Dueling-DQN
 使用了优势函数 advantage function（A3C也用了）：它只估计state的Q值，不考虑动作，好的策略能将state 导向一个更有优势的局面。然而不是任何时刻 action 都会影响 state的转移，因此Dueling DQN 结合了 优势函数估计的Q值 与 原本DQN对不同动作估计的Q值。DQN算法学习 state 与每个离散动作一一对应的Q值后才能知道学到 state 的Q值，而Dueling DQN 能通过优势函数直接学到state的价值，这使得Dueling DQN在一些action不影响环境的情况下能学比DQN更快
 
 ### D3QN
