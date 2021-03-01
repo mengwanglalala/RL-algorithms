@@ -222,7 +222,6 @@ def main():
     action_dim = env.action_space.shape[0]
     hidden_dim = 256
 
-
     ddpg = DDPG(action_dim, state_dim, hidden_dim)
 
     max_frames = 12000

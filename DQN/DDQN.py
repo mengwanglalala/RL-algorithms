@@ -58,9 +58,9 @@ class ReplayBuffer(object):
     def __init__(self, capacity):
         #deque模块是python标准库collections中的一项，它提供了两端都可以操作的序列，其实就是双向队列，
         #可以从左右两端增加元素，或者是删除元素。如果设置了最大长度，非输入端的数据会逐步移出窗口。
-        self.buffer = deque (maxlen = capacity)
+        self.buffer = deque(maxlen = capacity)
 
-    def push (self, state ,aciton, reward, next_state, done):
+    def push (self, state, aciton, reward, next_state, done):
         state = np.expand_dims(state,0)
         #这里增加维度的操作是为了便于之后使用concatenate进行拼接
         next_state = np.expand_dims(next_state,0)
@@ -102,6 +102,8 @@ def compute_td_loss(model,optimizer, replay_buffer, gamma, batch_size):
     return loss
 
 
+def update_target(current_model, target_model):
+    target_model.load_state_dict(current_model.state_dict())
 
 
 def main():
@@ -111,13 +113,18 @@ def main():
     observation_space = env.observation_space.shape[0]
     action_sapce = env.action_space.n
 
-    model = DQN (observation_space, action_sapce)
+    #######################改动之处###############################
+    current_model = DQN (observation_space, action_sapce)
+    target_model = DQN(observation_space, action_sapce)
 
     if USE_CUDA:
-        model = model.cuda()
+        current_model = current_model.cuda()
+        target_model = target_model.cuda()
 
-    optimizer = optim.Adam(model.parameters())
+    update_target(current_model, target_model)
 
+    optimizer = optim.Adam(current_model.parameters())
+    #############################################################
     replay_buffer = ReplayBuffer(1000)
 
     batch_size = 32
@@ -143,7 +150,7 @@ def main():
         #显示动画
         #env.render()
         epsilon = epsilon_by_frame(frame_idx)
-        action = model.act(state, epsilon)
+        action = current_model.act(state, epsilon)
         next_state, reward, done, _ = env.step(action)
         replay_buffer.push(state, action, reward, next_state, done)
         state = next_state
@@ -157,8 +164,12 @@ def main():
 
         if frame_idx+1 > batch_size:
             x_axis2.append(frame_idx)
-            loss = compute_td_loss(model, optimizer, replay_buffer, gamma, batch_size)
+            loss = compute_td_loss(current_model, optimizer, replay_buffer, gamma, batch_size)
             losses.append(np.array(loss.data.cpu()))
+
+        #########################改动之处#############################
+        if frame_idx % 100 == 0:
+            update_target(current_model, target_model)
 
 
 
