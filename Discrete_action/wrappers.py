@@ -57,7 +57,7 @@ class FireResetEnv(gym.Wrapper):
 class EpisodicLifeEnv(gym.Wrapper):
     def __init__(self, env):
         """Make end-of-life == end-of-episode, but only reset on true game over.
-        Done by DeepMind for the DQN and co. since it helps value estimation.
+        Done by DeepMind for the Discrete_action and co. since it helps value estimation.
         """
         gym.Wrapper.__init__(self, env)
         self.lives = 0
@@ -184,7 +184,7 @@ class ScaledFloatFrame(gym.ObservationWrapper):
 class LazyFrames(object):
     def __init__(self, frames):
         """This object ensures that common frames between the observations are only stored once.
-        It exists purely to optimize memory usage which can be huge for DQN's 1M frames replay
+        It exists purely to optimize memory usage which can be huge for Discrete_action's 1M frames replay
         buffers.
         This object should only be converted to numpy array before being passed to the model.
         You'd not believe how complex the previous solution was."""
