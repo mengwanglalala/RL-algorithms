@@ -1,31 +1,32 @@
 # RL-algorithms
 更新一些基础的RL代码
-- [离散的动作空间](#离散的动作空间(discrete action space))
+- [离散的动作空间](#离散的动作空间)
   - [DQN](#DQN)
   - [DDQN](#DDQN)
+  - [Dueling DQN](#Dueling DQN)
 
-- [连续的动作空间](#连续的动作空间(discrete action space))
+- [连续的动作空间](#连续的动作空间)
 
 
-## 离散的动作空间(discrete action space)
+## 离散的动作空间
 (已更) \<br>
 ### DQN
 可用于入门深度强化学习，使用一个Q Network来估计Q值，从而替换了 Q-table，完成从离散状态空间到连续状态空间的跨越。Q Network 会对每一个离散动作的Q值进行估计，执行的时候选择Q值最高的动作（greedy 策略）。并使用 epslion-greedy 策略进行探索（探索的时候，有很小的概率随机执行动作），来获得各种动作的训练数据
 
 (更新中) \<br>
-### DDQN(Double DQN)
-更加稳定，因为最优化操作会传播高估误差，所以她同时训练两个Q network并选择较小的Q值用于计算TD-error，降低高估误差。
+### DDQN
+(Double DQN)更加稳定，因为最优化操作会传播高估误差，所以她同时训练两个Q network并选择较小的Q值用于计算TD-error，降低高估误差。
 
 ### Dueling DQN
 使用了优势函数 advantage function（A3C也用了）：它只估计state的Q值，不考虑动作，好的策略能将state 导向一个更有优势的局面。然而不是任何时刻 action 都会影响 state的转移，因此Dueling DQN 结合了 优势函数估计的Q值 与 原本DQN对不同动作估计的Q值。DQN算法学习 state 与每个离散动作一一对应的Q值后才能知道学到 state 的Q值，而Dueling DQN 能通过优势函数直接学到state的价值，这使得Dueling DQN在一些action不影响环境的情况下能学比DQN更快
 
-### Dueling DoubleQN(D3QN)
+### D3QN
 Dueling DQN 与Double DQN相互兼容，一起用效果很好。简单，泛用，没有使用禁忌。任何一个刚入门的人都能独立地在前两种算法的基础上改出D3QN。在论文中使用了D3QN应该引用DuelingDQN 与 DoubleDQN的文章
 
 ### Noisy DQN
 探索能力稍强。Noisy DQN 把噪声添加到网络的输出层之前值。原本Q值较大的动作在添加噪声后Q值变大的概率也比较大。这种探索比epslion-greedy随机选一个动作去执行更好，至少这种针对性的探索既保证了探索动作多样，也提高了探索效率。
 
-## 连续的动作空间 continuous action space \<br>
+## 连续的动作空间
 (已更) \<br>
 ### DDPG
 DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定策略梯度算法，直接让策略网络输出action，成功在连续动作空间任务上训练出能用的策略，但是它使用 OU-noise 这种有很多超参数的方法去探索环境，训练慢，且不稳定。
