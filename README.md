@@ -1,13 +1,13 @@
 # RL-algorithms
 更新一些基础的RL代码
-- [离散的动作空间 discrete action space](#离散的动作空间)
+- [离散的动作空间](#离散的动作空间)
   - [DQN](#DQN)
-  - [DDQN(Double DQN)](#DDQN(Double DQN))
+  - [DDQN](#DDQN)
 
-- [连续的动作空间 continuous action space](#连续的动作空间 continuous action space \<br>)
+- [连续的动作空间](#连续的动作空间)
 
 
-## 离散的动作空间 discrete action space \<br>
+## 离散的动作空间(discrete action space)
 (已更) \<br>
 ### DQN
 可用于入门深度强化学习，使用一个Q Network来估计Q值，从而替换了 Q-table，完成从离散状态空间到连续状态空间的跨越。Q Network 会对每一个离散动作的Q值进行估计，执行的时候选择Q值最高的动作（greedy 策略）。并使用 epslion-greedy 策略进行探索（探索的时候，有很小的概率随机执行动作），来获得各种动作的训练数据
