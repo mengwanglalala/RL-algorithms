@@ -1,3 +1,7 @@
+"""
+Created on  Mar 1 2021
+@author: wangmeng
+"""
 import torch
 import torch.nn as nn
 from torch.distributions import MultivariateNormal
