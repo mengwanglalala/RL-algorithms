@@ -1,10 +1,10 @@
 # RL-algorithms
 更新一些基础的RL代码
-- [离散的动作空间 discrete action space](#离散的动作空间 discrete action space)
+- [离散的动作空间 discrete action space](#离散的动作空间 discrete action space \<br>)
   - [DQN](#DQN)
-  - [DDQN（Double DQN）](#DDQN（Double DQN）)
-  - [Dueling DQN](# Dueling DQN)
-- [连续的动作空间 continuous action space](#调制解调与误码率)
+  - [DDQN（Double DQN）](#DDQN（Double DQN)
+  - [Dueling DQN](#Dueling DQN)
+- [连续的动作空间 continuous action space](#连续的动作空间 continuous action space \<br>)
 
 
 ## 离散的动作空间 discrete action space \<br>
