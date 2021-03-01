@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad9bf35f-58c9-4bc9-9a3f-2eb4eaa012b4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/gym" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DQN.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1p0yxcAXmFcuXuN9wZNv1B6xI2s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LTF20\Desktop\RL" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.PPO">
+    <configuration name="CnnDQN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CnnDQN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDPG" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDPG.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DQN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PPO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PPO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PPO" />
+        <item itemvalue="Python.DDPG" />
+        <item itemvalue="Python.CnnDQN" />
+        <item itemvalue="Python.DQN" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad9bf35f-58c9-4bc9-9a3f-2eb4eaa012b4" name="Default Changelist" comment="" />
+      <created>1614334549215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614334549215</updated>
+      <workItem from="1614334560616" duration="13000000" />
+      <workItem from="1614423189161" duration="4183000" />
+      <workItem from="1614427769116" duration="3726000" />
+      <workItem from="1614431625358" duration="16705000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3039" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614335152228">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state x="3039" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614335152228" />
+    <state width="1789" height="466" key="DebuggerActiveHint" timestamp="1614343677387">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1789" height="466" key="DebuggerActiveHint/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614343677387" />
+    <state x="3365" y="312" key="FileChooserDialogImpl" timestamp="1614500870097">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state x="3365" y="312" key="FileChooserDialogImpl/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614500870097" />
+    <state width="2005" height="192" key="GridCell.Tab.0.bottom" timestamp="1614567119707">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="192" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614567119707" />
+    <state width="2005" height="192" key="GridCell.Tab.0.center" timestamp="1614567119707">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.0.center/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="192" key="GridCell.Tab.0.center/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614567119707" />
+    <state width="2005" height="192" key="GridCell.Tab.0.left" timestamp="1614567119706">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.0.left/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="192" key="GridCell.Tab.0.left/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614567119706" />
+    <state width="2005" height="192" key="GridCell.Tab.0.right" timestamp="1614567119707">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.0.right/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="192" key="GridCell.Tab.0.right/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614567119707" />
+    <state width="2005" height="189" key="GridCell.Tab.1.bottom" timestamp="1614509560772">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.1.bottom/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560772" />
+    <state width="2005" height="189" key="GridCell.Tab.1.bottom/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614495949801" />
+    <state width="2005" height="189" key="GridCell.Tab.1.center" timestamp="1614509560771">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.1.center/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="189" key="GridCell.Tab.1.center/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614495949801" />
+    <state width="2005" height="189" key="GridCell.Tab.1.left" timestamp="1614509560771">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.1.left/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560771" />
+    <state width="2005" height="189" key="GridCell.Tab.1.left/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614495949801" />
+    <state width="2005" height="189" key="GridCell.Tab.1.right" timestamp="1614509560772">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="189" key="GridCell.Tab.1.right/0.0.2048.1112/2560.0.2048.1112@0.0.2048.1112" timestamp="1614509560772" />
+    <state width="2005" height="189" key="GridCell.Tab.1.right/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614495949801" />
+    <state x="3086" y="199" key="SettingsEditor" timestamp="1614334918474">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state x="3086" y="199" key="SettingsEditor/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614334918474" />
+    <state width="1031" height="563" key="XDebugger.FullValuePopup" timestamp="1614429577034">
+      <screen x="2560" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1031" height="563" key="XDebugger.FullValuePopup/0.0.2048.1112/2560.0.2048.1112@2560.0.2048.1112" timestamp="1614429577034" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DQN.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RL$DQN.coverage" NAME="DQN Coverage Results" MODIFIED="1614432060787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RL$CnnDQN.coverage" NAME="CnnDQN Coverage Results" MODIFIED="1614478831975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RL$DDPG.coverage" NAME="DDPG Coverage Results" MODIFIED="1614501463588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RL$PPO.coverage" NAME="PPO Coverage Results" MODIFIED="1614567119691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
