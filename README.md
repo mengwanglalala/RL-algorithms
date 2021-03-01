@@ -1,12 +1,18 @@
 # RL-algorithms
 更新一些基础的RL代码
+1. DQN
+2. 项目2  
+3. 项目3  
+   * 项目1 （一个*号会显示为一个黑点，注意⚠️有空格，否则直接显示为*项目1） 
+   * 项目2  
+   * 
 
 ## 离散的动作空间 discrete action space \<br>
-（已更）\<br>
+(已更) \<br>
 ### DQN
 可用于入门深度强化学习，使用一个Q Network来估计Q值，从而替换了 Q-table，完成从离散状态空间到连续状态空间的跨越。Q Network 会对每一个离散动作的Q值进行估计，执行的时候选择Q值最高的动作（greedy 策略）。并使用 epslion-greedy 策略进行探索（探索的时候，有很小的概率随机执行动作），来获得各种动作的训练数据
 
-（更新中）\<br>
+(更新中) \<br>
 ### DDQN（Double DQN）
 更加稳定，因为最优化操作会传播高估误差，所以她同时训练两个Q network并选择较小的Q值用于计算TD-error，降低高估误差。
 
@@ -20,14 +26,14 @@ Dueling DQN 与Double DQN相互兼容，一起用效果很好。简单，泛用�
 探索能力稍强。Noisy DQN 把噪声添加到网络的输出层之前值。原本Q值较大的动作在添加噪声后Q值变大的概率也比较大。这种探索比epslion-greedy随机选一个动作去执行更好，至少这种针对性的探索既保证了探索动作多样，也提高了探索效率。
 
 ## 连续的动作空间 continuous action space \<br>
-（已更）\<br>
+(已更) \<br>
 ### DDPG
 DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定策略梯度算法，直接让策略网络输出action，成功在连续动作空间任务上训练出能用的策略，但是它使用 OU-noise 这种有很多超参数的方法去探索环境，训练慢，且不稳定。
 
 ### PPO（Proximal PO 近端策略搜索）
 训练稳定，调参简单，robust（稳健、耐操）。PPO对TRPO的信任域计算过程进行简化，论文中用的词是 surrogate objective。PPO动作的噪声方差是一个可训练的矢量（与动作矢量相同形状），而不由网络输出，这样做增强了PPO的稳健性 robustness。
 
-（更新中）\<br>
+(更新中) \<br>
 ### A3C（Asynchronous Advantage Actor-Critic）
 Asynchronous 指开启多个actor 在环境中探索，并异步更新。原本DDPG的Critic 是 Q(s, a)，根据state-action pair 估计Q值，优势函数只使用 state 去估计Q值，这是很好的创新：降低了随机策略梯度算法估计Q值的难度。然而优势函数有明显缺陷：不是任何时刻 action 都会影响 state的转移（详见 Dueling DQN），因此这个算法只适合入门学习「优势函数 advantage function」。如果你看到新论文还在使用A3C，那么你要怀疑其作者RL的水平。此外，A3C算法有离散动作版本，也有连续动作版本。A2C 指的是没有Asynchronous 的版本。
 
