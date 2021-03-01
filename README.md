@@ -1,11 +1,11 @@
 # RL-algorithms
 更新一些基础的RL代码
-1. DQN
-2. 项目2  
-3. 项目3  
-   * 项目1 （一个*号会显示为一个黑点，注意⚠️有空格，否则直接显示为*项目1） 
-   * 项目2  
-   * 
+- [离散的动作空间 discrete action space](#离散的动作空间 discrete action space)
+  - [DQN](#DQN)
+  - [DDQN（Double DQN）](#DDQN（Double DQN）)
+  - [Dueling DQN](# Dueling DQN)
+- [连续的动作空间 continuous action space](#调制解调与误码率)
+
 
 ## 离散的动作空间 discrete action space \<br>
 (已更) \<br>
