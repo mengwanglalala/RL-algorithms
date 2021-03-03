@@ -41,10 +41,10 @@ DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定
 ### PPO
 （Proximal PO 近端策略搜索）训练稳定，调参简单，robust（稳健、耐操）。PPO对TRPO的信任域计算过程进行简化，论文中用的词是 surrogate objective。PPO动作的噪声方差是一个可训练的矢量（与动作矢量相同形状），而不由网络输出，这样做增强了PPO的稳健性 robustness。
 
-(更新中)
 ### A3C
 （Asynchronous Advantage Actor-Critic）Asynchronous 指开启多个actor 在环境中探索，并异步更新。原本DDPG的Critic 是 Q(s, a)，根据state-action pair 估计Q值，优势函数只使用 state 去估计Q值，这是很好的创新：降低了随机策略梯度算法估计Q值的难度。然而优势函数有明显缺陷：不是任何时刻 action 都会影响 state的转移（详见 Dueling DQN），因此这个算法只适合入门学习「优势函数 advantage function」。如果你看到新论文还在使用A3C，那么你要怀疑其作者RL的水平。此外，A3C算法有离散动作版本，也有连续动作版本。A2C 指的是没有Asynchronous 的版本。
 
+(更新中)
 ### PPO+GAE
 （Generalized Advantage Estimation）训练最稳定，调参最简单，适合高维状态 High-dimensional state，但是环境不能有太多随机因数。GAE会根据经验轨迹 trajectory 生成优势函数估计值，然后让Critic去拟合这个值。在这样的调整下，在随机因素小的环境中，不需要太多 trajectory 即可描述当前的策略。尽管GAE可以用于多种RL算法，但是它与PPO这种On-policy 的相性最好。
 
