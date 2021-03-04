@@ -44,12 +44,12 @@ DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定
 ### A3C
 （Asynchronous Advantage Actor-Critic）Asynchronous 指开启多个actor 在环境中探索，并异步更新。原本DDPG的Critic 是 Q(s, a)，根据state-action pair 估计Q值，优势函数只使用 state 去估计Q值，这是很好的创新：降低了随机策略梯度算法估计Q值的难度。然而优势函数有明显缺陷：不是任何时刻 action 都会影响 state的转移（详见 Dueling DQN），因此这个算法只适合入门学习「优势函数 advantage function」。如果你看到新论文还在使用A3C，那么你要怀疑其作者RL的水平。此外，A3C算法有离散动作版本，也有连续动作版本。A2C 指的是没有Asynchronous 的版本。
 
+### SAC
+（Soft Actor-Critic with maximum entropy 最大熵）训练很快，探索能力好，但是很依赖Reward Function，不像PPO那样随便整一个Reward function 也能训练。PPO算法会计算新旧策略的差异（计算两个分布之间的距离），并让这个差异保持在信任域内，且不至于太小。SAC算法不是on-policy算法，不容易计算新旧策略的差异，所以它在优化时最大化策略的熵（动作的方差越大，策略的熵越高）
+
 (更新中)
 ### PPO+GAE
 （Generalized Advantage Estimation）训练最稳定，调参最简单，适合高维状态 High-dimensional state，但是环境不能有太多随机因数。GAE会根据经验轨迹 trajectory 生成优势函数估计值，然后让Critic去拟合这个值。在这样的调整下，在随机因素小的环境中，不需要太多 trajectory 即可描述当前的策略。尽管GAE可以用于多种RL算法，但是它与PPO这种On-policy 的相性最好。
-
-### SAC
-（Soft Actor-Critic with maximum entropy 最大熵）训练很快，探索能力好，但是很依赖Reward Function，不像PPO那样随便整一个Reward function 也能训练。PPO算法会计算新旧策略的差异（计算两个分布之间的距离），并让这个差异保持在信任域内，且不至于太小。SAC算法不是on-policy算法，不容易计算新旧策略的差异，所以它在优化时最大化策略的熵（动作的方差越大，策略的熵越高）
 
 ### TD3
 TD3（TDDD，Twin Delay DDPG），擅长调参的人才建议用，因为它影响训练的敏感超参数很多。它从Double DQN那里继承了Twin Critic，用来降低高估误差；它用来和随机策略梯度很像的方法：计算用于更新TD-error的Q值时，给action加上了噪声，用于让Critic拟合更平滑的Q值估计函数。TD3建议 延迟更新目标网络，即多更新几次网络后，再使用 soft update 将网络更新到target network上，我认为这没有多大用，后来的其他算法也不用这个技巧。TD3还建议在计算Q值时，为动作添加一个噪声，用于平滑Critic函数，在确定策略中，TD3这么用很像“随机策略”
