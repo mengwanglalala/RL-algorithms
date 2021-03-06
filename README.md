@@ -33,6 +33,7 @@ Dueling DQN 与Double DQN相互兼容，一起用效果很好。简单，泛用�
 ### Noisy-DQN
 探索能力稍强。Noisy DQN 把噪声添加到网络的输出层之前值。原本Q值较大的动作在添加噪声后Q值变大的概率也比较大。这种探索比epslion-greedy随机选一个动作去执行更好，至少这种针对性的探索既保证了探索动作多样，也提高了探索效率。
 
+
 ## 连续的动作空间
 (已更)
 ### DDPG
@@ -46,6 +47,7 @@ DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定
 
 ### SAC
 （Soft Actor-Critic with maximum entropy 最大熵）训练很快，探索能力好，但是很依赖Reward Function，不像PPO那样随便整一个Reward function 也能训练。PPO算法会计算新旧策略的差异（计算两个分布之间的距离），并让这个差异保持在信任域内，且不至于太小。SAC算法不是on-policy算法，不容易计算新旧策略的差异，所以它在优化时最大化策略的熵（动作的方差越大，策略的熵越高）
+SAC也可以离散化到离散空间。对于SAC-discrete, 其更适合有很多不确定性的环境，对于一些确定状态的环境表现不如rainbow DQN
 
 (更新中)
 ### PPO+GAE
@@ -54,3 +56,5 @@ DDPG（Deep DPG ），可用于入门连续动作空间的DRL算法。DPG 确定
 ### TD3
 TD3（TDDD，Twin Delay DDPG），擅长调参的人才建议用，因为它影响训练的敏感超参数很多。它从Double DQN那里继承了Twin Critic，用来降低高估误差；它用来和随机策略梯度很像的方法：计算用于更新TD-error的Q值时，给action加上了噪声，用于让Critic拟合更平滑的Q值估计函数。TD3建议 延迟更新目标网络，即多更新几次网络后，再使用 soft update 将网络更新到target network上，我认为这没有多大用，后来的其他算法也不用这个技巧。TD3还建议在计算Q值时，为动作添加一个噪声，用于平滑Critic函数，在确定策略中，TD3这么用很像“随机策略”
 
+### PPG
+PPG（Proximal Policy Gradient），A3C、PPO 都是同策略 On-policy，它要求：在环境中探索并产生训练数据的策略 与 被更新的策略网络 一定得是同一个策略。她们需要删掉已旧策略的数据，然后使用新策略在环境中重新收集。为了让PPO也能用 off-policy 的数据来训练，PPG诞生了，思路挺简单的，原本的On-policy PPO部分该干啥干啥，额外引入一个使用off-policy数据进行训练的Critic，让它与PPO的Critic共享参数，也就是Auxiliary Task，这种算法并不是在任何情况下都能比PPO好，因为PPG涉及到Auxiliary task，这要求她尽可能收集更多的训练数据，并在大batch size 下面才能表现得更好。

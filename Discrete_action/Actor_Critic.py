@@ -129,7 +129,7 @@ def main():
             state = next_state
             frame_idx += 1
 
-            if frame_idx % 1000 == 0:
+            if frame_idx % 100 == 0:
                 test_rewards.append(np.mean([test_env(model, env) for _ in range(10)]))
                 plot(frame_idx, test_rewards)
 

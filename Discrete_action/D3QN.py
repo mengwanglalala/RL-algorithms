@@ -86,7 +86,7 @@ class ReplayBuffer(object):
         return np.concatenate(state),  action, reward, np.concatenate(next_state), done
 
 
-def compute_td_loss(model,optimizer, replay_buffer, gamma, batch_size):
+def compute_td_loss(current_model, target_model,optimizer, replay_buffer, gamma, batch_size):
     state, action, reward, next_state, done = replay_buffer.sample(batch_size)
     #通通丢到GPU上去
     state = Variable(torch.FloatTensor(np.float32(state)))
@@ -95,8 +95,8 @@ def compute_td_loss(model,optimizer, replay_buffer, gamma, batch_size):
     reward = Variable(torch.FloatTensor(reward))
     done = Variable(torch.FloatTensor(done))
 
-    q_values = model(state)
-    next_q_values = model(next_state)
+    q_values = current_model(state)
+    next_q_values = target_model(next_state)
 
     q_value = q_values.gather(1, action.unsqueeze(1)).squeeze(1)
     #gather可以看作是对q_values的查询，即元素都是q_values中的元素，查询索引都存在action中。输出大小与action.unsqueeze(1)一致。
@@ -106,7 +106,8 @@ def compute_td_loss(model,optimizer, replay_buffer, gamma, batch_size):
 
     expected_q_value = reward + gamma * next_q_value * (1 - done)
 
-    loss = (q_value - Variable(expected_q_value.data)).pow(2).mean()
+    #loss = (q_value - Variable(expected_q_value.data)).pow(2).mean()
+    loss = (q_value - expected_q_value.detach()).pow(2).mean()
 
     optimizer.zero_grad()
     loss.backward()
@@ -175,7 +176,7 @@ def main():
 
         if frame_idx+1 > batch_size:
             x_axis2.append(frame_idx)
-            loss = compute_td_loss(current_model, optimizer, replay_buffer, gamma, batch_size)
+            loss = compute_td_loss(current_model, target_model, optimizer, replay_buffer, gamma, batch_size)
             losses.append(np.array(loss.data.cpu()))
 
         if frame_idx % 100 == 0:
